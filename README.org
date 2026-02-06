@@ -19,7 +19,7 @@ This repository contains my personal [[https://github.com/doomemacs/doomemacs][D
 Clone this repository to your Doom Emacs configuration directory:
 
 #+begin_src sh
-git clone <repository-url> ~/.config/doom
+git clone https://github.com/KyoukoMejiro/doom-emacs/ ~/.config/doom
 #+end_src
 
 Then synchronize your Doom Emacs installation:
