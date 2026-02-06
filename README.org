@@ -1,0 +1,194 @@
+#+TITLE: Personal Doom Emacs Configuration
+#+AUTHOR: samarth
+#+DATE: 2026-02-06
+
+* Overview
+
+This repository contains my personal [[https://github.com/doomemacs/doomemacs][Doom Emacs]] configuration. Doom Emacs is a configuration framework for GNU Emacs that provides a curated experience with sensible defaults, evil mode, and a modular approach to configuration.
+
+* Installation
+
+** Prerequisites
+
+- GNU Emacs 27.1 or higher
+- Git 2.23 or higher
+- [[https://github.com/doomemacs/doomemacs][Doom Emacs]] installed
+
+** Setup
+
+Clone this repository to your Doom Emacs configuration directory:
+
+#+begin_src sh
+git clone <repository-url> ~/.config/doom
+#+end_src
+
+Then synchronize your Doom Emacs installation:
+
+#+begin_src sh
+doom sync
+#+end_src
+
+Restart Emacs or reload your configuration with:
+
+#+begin_src emacs-lisp
+M-x doom/reload
+#+end_src
+
+
+* Changes
+
+** UI Customizations
+
+*** Font
+- Primary font: *CaskaydiaCove Nerd Font* (size 18)
+- Alternative font commented out: ComicShannsMono Nerd Font
+
+*** Theme
+- Theme: ~doom-tomorrow-night~
+- Relative line numbers enabled
+- Custom dashboard with randomized splash images
+
+*** Dashboard
+- Random splash screen images from anime/manga characters
+- Custom time display format (12-hour with day/date)
+- Battery indicator (when available)
+- Shortmenu removed from dashboard
+
+*** Modeline
+- Time and date display in format: "Day, Month Date HH:MMam/pm"
+- Battery status display (when available)
+
+** Enabled Modules
+
+*** Completion
+- ~corfu~ with orderless completion
+- ~vertico~ for minibuffer completion
+
+*** UI
+- doom, doom-dashboard, doom-quit
+- hl-todo for highlighting TODO keywords
+- indent-guides
+- ligatures support
+- modeline
+- ophints
+- popup with defaults
+- vc-gutter with pretty symbols
+- vi-tilde-fringe
+- workspaces
+
+*** Editor
+- ~evil~ mode everywhere (Vim keybindings)
+- file-templates
+- code folding
+- auto-formatting on save
+- multiple-cursors
+- snippets support
+- smart whitespace handling with auto-trim
+- word-wrap
+
+*** Emacs Core
+- ~dired~ with icons and dirvish integration
+- electric indent
+- tramp for remote file editing
+- version control support
+
+*** Terminal
+- eshell
+
+*** Checkers
+- syntax checking
+
+*** Tools
+- debugger
+- docker support
+- eval with overlay
+- lookup capabilities
+- magit for Git integration
+- PDF support with icons
+- terraform support
+- tmux integration
+
+*** OS Support
+- macOS support (conditional)
+- TTY support
+- Linux support
+
+*** Languages
+
+Programming language support with LSP integration where applicable:
+
+- C/C++ (with LSP)
+- Emacs Lisp
+- Go (with LSP)
+- Haskell (with LSP)
+- JSON
+- Java (with LSP)
+- LaTeX
+- Lua
+- Markdown (with grip preview)
+- Nix
+- Org mode (with roam2)
+- Python
+- Shell scripts
+
+*** Config
+- Default bindings and smartparens
+
+** Custom Settings
+
+*** Evil Mode
+- Evil mode enabled in minibuffer
+- Compilation mode starts in normal state
+
+*** Org Mode
+- Org directory: =~/org/=
+
+*** Dirvish
+- Enhanced preview for PDF and image files
+- Preview window size: 40% x 40%
+
+*** Popup Rules
+- eww browser opens in right side panel (50% width)
+
+* Splash Images
+
+The configuration includes several custom splash screen images that are randomly displayed on the dashboard:
+
+- Akira_Asai_Anime.png
+- Anko_OfficerOutfit.png
+- Nazuna_Nanakusa_Manga_(Color).png
+- Nazuna_SantaOutfit.png
+- Nazuna_SchoolUniform.png
+- vagabond.png
+
+Images are stored in ~doom/images/~ directory.
+
+* Maintenance
+
+** Updating Doom
+
+To update Doom Emacs and packages:
+
+#+begin_src sh
+doom upgrade
+#+end_src
+
+** Syncing Configuration
+
+After making changes to configuration files:
+
+#+begin_src sh
+doom sync
+#+end_src
+
+** Cleanup
+
+To remove orphaned packages:
+
+#+begin_src sh
+doom sync -p
+#+end_src
+
+* License
+
+This configuration is provided as-is for personal use.
